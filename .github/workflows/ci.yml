@@ -35,12 +35,12 @@ jobs:
 
       - name: Setup PureScript tooling
         run:
-          npm i -g purescript@latest purs-tidy@latest purescript-psa@latest spago@latest
+          npm i -g purescript@latest purs-tidy@latest purescript-psa@latest spago@next
 
       - name: Cache PureScript dependencies
         uses: actions/cache@v3
         with:
-          key: ${{ runner.os }}-spago-${{ hashFiles('**/*.dhall') }}
+          key: ${{ runner.os }}-spago-${{ hashFiles('**/spago.yml') }}
           path: |
             .spago
             output
@@ -51,7 +51,7 @@ jobs:
       # Note: `purs-args` actually forwards these args to `psa`
       - name: Build the project
         run: |
-          npx spago build --purs-args "--censor-lib --strict"
+          npx spago build
 
       - name: Check Formatting
         if: runner.os == 'Linux'
