@@ -1,0 +1,25 @@
+package:
+  dependencies:
+    - aff
+    - console
+    - effect
+    - either
+    - functions
+    - node-buffer
+    - node-streams
+    - prelude
+    - unsafe-coerce
+  name: zlib
+  publish:
+    version: 0.1.0
+    license: MIT
+    location:
+      githubOwner: JordanMartinez
+      githubRepo: purescript-node-zlib
+workspace:
+  extra_packages: {}
+  package_set:
+    registry: 27.3.0
+  pedantic_packages: true
+  censor_warnings: "dependency"
+  strict: true
