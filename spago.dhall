@@ -1,7 +1,6 @@
 { name = "node-zlib"
 , dependencies =
   [ "aff"
-  , "console"
   , "effect"
   , "either"
   , "functions"
