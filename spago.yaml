@@ -9,9 +9,9 @@ package:
     - node-streams
     - prelude
     - unsafe-coerce
-  name: zlib
+  name: node-zlib
   publish:
-    version: 0.1.0
+    version: 0.2.0
     license: MIT
     location:
       githubOwner: JordanMartinez
