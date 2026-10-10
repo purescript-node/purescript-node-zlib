@@ -1,10 +1,13 @@
 {
   "scripts": {
     "build": "spago build --pedantic-packages",
-    "test": "spago test --pedantic-packages"
+    "test": "spago test --pedantic-packages",
+    "format": "purs-tidy format-in-place src test",
+    "format:check": "purs-tidy check src test"
   },
   "devDependencies": {
     "purescript": "0.15.16",
+    "purs-tidy": "0.11.1",
     "spago": "1.0.4"
   }
 }
